@@ -12,13 +12,13 @@ html {
 
 @media only screen and (min-width: 51.25em) {
   html {
-    font-size: 75%;
+    font-size: 68.75%;
   }
 }
 
 @media only screen and (min-width: 120em) {
   html {
-    font-size: 87.5%;
+    font-size: 75%;
   }
 }
 
