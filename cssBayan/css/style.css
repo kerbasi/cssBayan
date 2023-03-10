@@ -1,1 +1,19 @@
-﻿
+﻿.page {
+  background-color: cornsilk;
+  font-size: calc(10em / 16em);
+}
+
+.memes {
+}
+
+.memes__list {
+  list-style: none;
+}
+
+.memes__input {
+  display: none;
+}
+
+.memes__input:checked + .memes__label {
+  background-color: aqua;
+}
