@@ -52,6 +52,10 @@ html {
   color: #000;
 }
 
+.memes:hover * {
+  cursor: pointer;
+}
+
 .memes:hover .meme__icon {
   visibility: visible;
   opacity: 1;
