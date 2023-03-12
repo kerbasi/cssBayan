@@ -1,0 +1,170 @@
+﻿* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  color: #000;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 51.25em) {
+  html {
+    font-size: 68.75%;
+  }
+}
+
+@media only screen and (min-width: 120em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+.page {
+  background-color: cornsilk;
+  max-width: 100vw;
+  font-family: "Merienda One", cursive;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.memes {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.memes__title {
+  font-size: 3rem;
+  margin-left: 3rem;
+}
+
+.memes__list {
+  list-style: none;
+}
+
+.memes__input {
+  display: none;
+}
+
+.memes:hover .meme__title {
+  color: #000;
+}
+
+.memes:hover * {
+  cursor: pointer;
+}
+
+.memes:hover .meme__icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.memes__input:checked + .meme .meme__img,
+.memes__item:hover .meme__img {
+  max-height: 100%;
+  margin-top: 2rem;
+  animation: jump 0.5s ease-in-out;
+}
+
+.memes__input:checked + .meme .meme__title,
+.memes__item:hover .meme__title {
+  color: #000;
+}
+
+.memes__input:checked + .meme .meme__img,
+.memes__item:hover .meme__img {
+  max-height: 100%;
+  margin-top: 2rem;
+}
+
+.memes__input:checked + .meme .meme__icon,
+.memes__item:hover .meme__icon {
+  transform: rotate(45deg);
+}
+
+.meme:active {
+  filter: opacity(70%);
+}
+
+.meme:active .meme__title {
+  color: mediumturquoise;
+}
+
+.memes__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.memes__item:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.meme {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.meme__icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/plus-solid.svg);
+  background-size: cover;
+  background-position: center;
+  justify-self: end;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+@media (hover: none) {
+  .meme__icon {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.meme__title {
+  font-size: 2rem;
+  color: mediumturquoise;
+  transition: all 0.2s;
+}
+
+@media (hover: none) {
+  .meme__title {
+    color: #000;
+  }
+}
+
+.meme__img {
+  width: 90%;
+  max-width: 35rem;
+  max-height: 0;
+  object-fit: cover;
+  grid-column: span 2;
+  justify-self: center;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  33% {
+    transform: translateY(1rem);
+  }
+
+  66% {
+    transform: translateY(-1rem);
+  }
+
+  0% {
+    transform: translateY(0rem);
+  }
+}
