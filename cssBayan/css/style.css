@@ -65,6 +65,7 @@ html {
 .memes__item:hover .meme__img {
   max-height: 100%;
   margin-top: 2rem;
+  animation: shake 1s ease-in-out;
 }
 
 .memes__input:checked + .meme .meme__title,
@@ -80,9 +81,7 @@ html {
 
 .memes__input:checked + .meme .meme__icon,
 .memes__item:hover .meme__icon {
-  width: 1.7rem;
-  height: 1.7rem;
-  background-image: url(../img/xmark-solid.svg);
+  transform: rotate(45deg);
 }
 
 .meme:active {
@@ -148,6 +147,24 @@ html {
   object-fit: cover;
   grid-column: span 2;
   justify-self: center;
-  transition: max-height 0.2s;
   border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  33% {
+    transform: rotate(1deg);
+  }
+
+  66% {
+    transform: rotate(-1deg);
+  }
+
+  0% {
+    transform: rotate(0deg);
+  }
 }
